@@ -32,6 +32,9 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
 	{ "Kitty",    NULL,       NULL,       0,            0,           -1 },
 	{ "mpv",      NULL,       NULL,       0,            1,           -1 },
+	{ "steamwebhelper",	  NULL,       NULL,         0,            1,           -1 },
+	{ "steam",    NULL,       NULL,       0,            1,           -1 },
+	{ "qbittorrent",          NULL,       NULL,         0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -67,6 +70,8 @@ static const char *volup[]={"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",
 static const char *voldn[]={"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",NULL};
 static const char *bnup[]={"brightnessctl", "s", "+10%", NULL};
 static const char *bndn[]={"brightnessctl", "s", "10%-", NULL};
+static const char *redon[]={"redshift", "-PO", "2500", NULL};
+static const char *redoff[]={"redshift", "-x", NULL};
 
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
