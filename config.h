@@ -32,9 +32,8 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
 	{ "Kitty",    NULL,       NULL,       0,            0,           -1 },
 	{ "mpv",      NULL,       NULL,       0,            1,           -1 },
-	{ "steamwebhelper",	  NULL,       NULL,         0,            1,           -1 },
-	{ "steam",    NULL,       NULL,       0,            1,           -1 },
-	{ "qbittorrent",          NULL,       NULL,         0,            1,           -1 },
+	{ "steamwebhelper","steam", NULL,     0,            1,           -1 },
+	{ "qBittorrent","qbittorrent",NULL,   0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -88,6 +87,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_n,      spawn,          {.v = redon } },
+	{ MODKEY|ShiftMask,		XK_n,      spawn,          {.v = redoff } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
