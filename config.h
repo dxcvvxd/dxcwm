@@ -32,6 +32,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
 	{ "Kitty",    NULL,       NULL,       0,            0,           -1 },
 	{ "mpv",      NULL,       NULL,       0,            1,           -1 },
+	{ "jamesdsp", NULL,       NULL,       0,            1,           -1 },
 	{ "zenity",   NULL,       NULL,       0,            1,           -1 },
 	{ "steamwebhelper",NULL,  NULL,       0,            1,           -1 },
 	{ "steam",    NULL,       NULL,       0,            1,           -1 },
