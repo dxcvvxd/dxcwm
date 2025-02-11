@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	{ "steamwebhelper",NULL,  NULL,       0,            1,           -1 },
 	{ "steam",    NULL,       NULL,       0,            1,           -1 },
 	{ "qBittorrent","qbittorrent",NULL,   0,            1,           -1 },
+	{ "Alert",    NULL,       NULL,       0,            1,           -1 }
 };
 
 /* layout(s) */
