@@ -68,6 +68,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *rofi[]={"rofi","-modi", "drun", "-show", "drun", "-show-icons", "-font", "Monocraft Nerd Font 12", NULL};
+static const char *rofimoji[]={"rofi", "-modi", "emoji:rofimoji", "-show", "emoji"};
 static const char *flame[]={"flameshot", "gui", NULL};
 static const char *flamefull[]={"flameshot", "full", "-c", "-p", "/home/dxc/Pictures/screens/", NULL};
 static const char *volup[]={"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",NULL};
@@ -84,6 +85,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = rofi } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = rofimoji } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
