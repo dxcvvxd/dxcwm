@@ -68,6 +68,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *rofi[]={"rofi","-modi", "drun", "-show", "drun", "-show-icons", "-font", "Monocraft Nerd Font 12", NULL};
+static const char *networkmenu[]={"networkmanager_dmenu", NULL};
 static const char *rofimoji[]={"rofi", "-modi", "emoji:rofimoji", "-show", "emoji"};
 static const char *flame[]={"flameshot", "gui", NULL};
 static const char scrotwindow[]="scrot -q 100 -u -Z -z -b - | xclip -selection clipboard -target image/png";
@@ -86,6 +87,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = rofi } },
+	{ MODKEY|ShiftMask,		XK_d,	   spawn,          {.v = networkmenu } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = rofimoji } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
