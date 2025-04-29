@@ -107,7 +107,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ 0|ShiftMask,			XK_Print,  spawn,          {.v = flame } },
-	{ MODKEY|ShiftMask,		XK_Print,  spawn,          SHCMD( scrotwindow ) },
+	{ MODKEY|ShiftMask,		XK_Print,  spawn,          SHCMD(scrotwindow) },
 	{ 0,				XK_Print,  spawn,          {.v = flamefull } },
 	{ 0,				XF86XK_AudioRaiseVolume,   spawn,		   {.v=volup} },
 	{ 0,				XF86XK_AudioLowerVolume,   spawn,		   {.v=voldn} },
