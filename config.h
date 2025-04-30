@@ -71,7 +71,6 @@ static const char *rofi[]={"rofi","-modi", "drun", "-show", "drun", "-show-icons
 static const char *networkmenu[]={"networkmanager_dmenu", NULL};
 static const char *rofimoji[]={"rofi", "-modi", "emoji:rofimoji", "-show", "emoji"};
 static const char *flame[]={"flameshot", "gui", NULL};
-static const char scrotwindow[]="scrot -q 100 -u -Z -z -b - | xclip -selection clipboard -target image/png";
 static const char *flamefull[]={"flameshot", "full", "-c", "-p", "/home/dxc/Pictures/screens/", NULL};
 static const char *volup[]={"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",NULL};
 static const char *voldn[]={"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",NULL};
@@ -107,7 +106,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ 0|ShiftMask,			XK_Print,  spawn,          {.v = flame } },
-	{ MODKEY|ShiftMask,		XK_Print,  spawn,          SHCMD(scrotwindow) },
+	{ MODKEY|ShiftMask,		XK_Print,  spawn,          SHCMD("scrot -q 100 -u -Z -z -b - | xclip -selection clipboard -target image/png") },
 	{ 0,				XK_Print,  spawn,          {.v = flamefull } },
 	{ 0,				XF86XK_AudioRaiseVolume,   spawn,		   {.v=volup} },
 	{ 0,				XF86XK_AudioLowerVolume,   spawn,		   {.v=voldn} },
